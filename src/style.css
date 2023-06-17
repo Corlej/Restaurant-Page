@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Dumbledor';
+    src: url(./Dumbledor-2.ttf.woff);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Lato:wght@400;700;900&family=Raleway:wght@400;500;600;650;800&family=Roboto:wght@500;700&display=swap');
+:root {
+    color: #387c04;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fdfefb;
+    margin: 0;
+    height: 3000px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: #fdfefb;
+    width: 100vw;
+    margin: 0px;
+    box-shadow: 4px 1px 0px 4px rgba(0, 0, 0, 20%);
+    position: relative; /* Added property */
+}
+
+.logoGroup {
+    display: flex;
+    cursor: pointer;
+    font-family: 'Dumbledor';
+    color: #387c04;
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    gap: 10px;
+    text-transform: capitalize;
+    vertical-align: middle;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+ .logo {
+    width: 60px;
+    height: 60px;
+}
+
+.linkGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway';
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #73568d;
+    font-size: 14px;
+    height: 20px;
+    position: absolute;
+    gap: 30px;
+    top: 45%;
+}
+
+.link1, .link2, .link3, .link4 {
+    cursor: pointer;
+  }
+
+.link2 {
+    margin-right: 200px;
+}
+
+.link3 {
+    margin-left: 200px;
+}
+
+.hero {
+    width: 100vw;
+    height: 105vh;
+}
+
+.heroImg {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(./hero.jpeg);
+    background-position-y: 40%;
+    background-size: cover;
+    object-fit: scale-down;
+    width: 100vw;
+    height: 105vh;
+}
+
+.header2 {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    background-color: #fdfefb;
+    width: 100vw;
+    margin: 0px;
+    top: 0;
+    opacity: 0; /* Initially set the opacity to 0 */
+    transition: opacity 0.3s ease; /* Add transition effect */
+    border: 1px solid violet;
+}
+
+.header2.visible {
+    opacity: 1;
+  }
+
+.header2 .linkGroup {
+    top:35%;
+    align-items: center;
+}
+
+.header2 .link2 {
+    margin-right: 25px;
+}
+
+.header2 .link3 {
+    margin-left: 25px;
+}
+
+.header2 .logo {
+    cursor: pointer;
+}
