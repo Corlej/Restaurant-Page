@@ -1,5 +1,5 @@
 import './style.css';
-
+import './logo.svg';
 window.addEventListener('scroll', function() {
     var header = document.querySelector('.header2');
     var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
