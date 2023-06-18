@@ -19,13 +19,20 @@ body {
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
     height: 100px;
+    font-family: 'Raleway';
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #73568d;
+    font-size: 14px;
+    gap: 30px;
     background-color: #fdfefb;
     width: 100vw;
-    margin: 0px;
     box-shadow: 4px 1px 0px 4px rgba(0, 0, 0, 20%);
-    position: relative; /* Added property */
+    z-index: 2;
 }
 
 .logoGroup {
@@ -36,12 +43,9 @@ body {
     font-size: 60px;
     font-weight: 500;
     letter-spacing: 2px;
+    width: auto;
     gap: 10px;
     text-transform: capitalize;
-    vertical-align: middle;
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
 }
 
  .logo {
@@ -49,32 +53,60 @@ body {
     height: 60px;
 }
 
-.linkGroup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Raleway';
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #73568d;
-    font-size: 14px;
-    height: 20px;
-    position: absolute;
-    gap: 30px;
-    top: 45%;
-}
-
-.link1, .link2, .link3, .link4 {
+.header .link1,.header .link2,.header .link3,.header .link4, .header .link5 {
+    position: relative;
     cursor: pointer;
   }
 
-.link2 {
-    margin-right: 200px;
+.leftLinkGroup,
+.rightLinkGroup {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.link3 {
-    margin-left: 200px;
+.rightLinkGroup {
+    justify-content: flex-start;
+}
+
+.header .leftLinkGroup,
+.header .rightLinkGroup {
+    transform: translateY(50%);
+}
+
+.link {
+    position: relative;
+    cursor: pointer;
+}
+
+.leftLinkGroup .link1::before,
+.leftLinkGroup .link2::before,
+.leftLinkGroup .link3::before {
+    background-color: #73568d;
+}
+
+.rightLinkGroup .link4::before,
+.rightLinkGroup .link5::before {
+    background-color: #73568d;
+}
+
+.link:first-child::before {
+    display: none;
+}
+
+.link:last-child::before {
+    height: 50%;
+}
+
+
+.link:not(:last-child)::after {
+    height: 100%;
+}
+
+.link:hover {
+    color: #387c04;
 }
 
 .hero {
@@ -87,7 +119,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     background-image: url(./hero.jpeg);
     background-position-y: 40%;
     background-size: cover;
@@ -100,31 +131,29 @@ body {
     position: sticky;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 50px;
     background-color: #fdfefb;
+    font-family: 'Raleway';
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #73568d;
+    font-size: 14px;
     width: 100vw;
-    margin: 0px;
     top: 0;
+    gap: 30px;
     opacity: 0; /* Initially set the opacity to 0 */
     transition: opacity 0.3s ease; /* Add transition effect */
     border: 1px solid violet;
+    z-index: 2;
 }
 
 .header2.visible {
     opacity: 1;
   }
 
-.header2 .linkGroup {
-    top:35%;
-    align-items: center;
-}
-
-.header2 .link2,
-.header2 .link3{
-    margin: 0px;
-}
-
-.header2 .logo {
+.logo2 {
     cursor: pointer;
     height: 25px;
 }
@@ -140,5 +169,5 @@ body {
     height: 100vh;
     width: 70vw;
     border: 1px solid black;
-    margin-top: 50px;
+    margin-top: px;
 }
