@@ -3,10 +3,7 @@
     src: url(./Dumbledor-2.ttf.woff);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Lato:wght@400;700;900&family=Raleway:wght@400;500;600;650;800&family=Roboto:wght@500;700&display=swap');
-:root {
-    color: #387c04;
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500&family=Poppins:wght@200;300;500&family=Raleway:wght@600&display=swap');
 
 body {
     display: flex;
@@ -14,14 +11,19 @@ body {
     flex-direction: column;
     background-color: #fdfefb;
     margin: 0;
-    height: 3000px;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100px;
+    height: 80px;
     font-family: 'Raleway';
     font-weight: 600;
     text-transform: uppercase;
@@ -115,7 +117,7 @@ body {
 }
 
 .heroImg {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,7 +147,6 @@ body {
     gap: 30px;
     opacity: 0; /* Initially set the opacity to 0 */
     transition: opacity 0.3s ease; /* Add transition effect */
-    border: 1px solid violet;
     z-index: 2;
 }
 
@@ -159,15 +160,189 @@ body {
 }
 
 .foodMenu {
-    height: 80vh;
-    width: 70vw;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'oswald';
+    padding-top: 20px;
+    width: 1200px;
+    border: 1px solid green;
+}
+
+.menuSubheader {
+    text-align: center;
+    font-family: 'oswald';
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 1000px;
+    color: black;
+    position: relative;
+    border: 1px solid pink;
+}
+
+.menuSubheader::before,
+.menuSubheader::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    width: 40%;
+    height: 1px;
+    background-color: black;
+}
+
+.menuSubheader::before {
+    left: 0;
+}
+
+.menuSubheader::after {
+    right: 0;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    gap: 50px;
+}
+
+.menuSections {
+    display: flex;
+    height: auto;
+    width: 1000px;
+    gap: 50px;
+    padding-bottom: 30px;
+}
+
+.leftButton {
+    float: right;
+}
+
+.menuLeft,
+.menuCenter,
+.menuRight {
+    width: calc(100%/3);
+}
+
+.category {
+    color: #387c04;
+    font-size: 22px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    margin-top: 20px;
+}
+
+.menuRight .category .item {
     margin-top: 10px;
 }
 
-.foodGif {
-    height: 100vh;
-    width: 70vw;
-    border: 1px solid black;
-    margin-top: px;
+.menuRight .category .item:first-child {
+    margin-top: 20px;
+}
+.dishGroup {
+    justify-content: flex-start;
+    text-align: left;
+    color: #000000;
+    width: 100%;
+}
+
+.dishGroupUpper {
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+.name {
+    display: flex;
+    gap: 10px;
+}
+
+.allergins {
+    padding-top: 1px;
+    font-weight: 200;
+    font-size: 10px;
+}
+.description {
+    font-size: 12px;
+    font-weight: 200;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.price {
+    justify-content: flex-end;
+}
+
+.menuFooter {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    position: relative;
+    width: 1000px;
+    margin-bottom: 50px;
+  }
+
+.menuFooter::before,
+.menuFooter::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 33%;
+  height: 1px;
+  background-color: black;
+}
+
+.menuFooter::before {
+    left: 0;
+}
+
+.menuFooter::after {
+    right: 0;
+}
+
+.foodImageContainer {
+    position: relative;
+    width: 80%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
+    margin: auto;
+}
+
+.foodImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+  
+.foodImage.show {
+opacity: 1;
+}
+
+@keyframes imageTransition {
+0%, 33.33% {
+    opacity: 0;
+}
+33.33%, 66.66% {
+    opacity: 1;
+}
+66.66%, 100% {
+    opacity: 0;
+}
 }

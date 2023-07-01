@@ -11,3 +11,13 @@ window.addEventListener('scroll', function() {
       header.classList.remove('visible');
     }
   });
+
+  const images = document.querySelectorAll('.foodImage');
+  let currentIndex = 0;
+  images[currentIndex].classList.add('show');
+  
+  setInterval(() => {
+    images[currentIndex].classList.remove('show');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('show');
+  }, 9250);

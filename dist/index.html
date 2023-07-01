@@ -5,23 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
 
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="top">
         <div class="leftLinkGroup">
-            <div class="link link1">Menu</div>
-            <div class="link link2">About</div>
-            <div class="link link3">Events</div>
+            <a href="#menu" class="link link1">Menu</a>
+            <a href="#about" class="link link2">About</a>
+            <a  href="#events" class="link link3">Events</a>
         </div>
-        <div class="logoGroup">
-            <img class="logo" src="../src/Logo.svg" alt="Logo">
+        <a href="./index.html" class="logoGroup">
+            <img class="logo" src="../src/Logo.svg"  alt="Logo">
             <div class="header-text">Greenhorn</div>
-        </div>
+        </a>
         <div class="rightLinkGroup">
-            <div class="link link4">Hours & Location</div>
-            <div class="link link5">Contact Us</div>
+            <a href="#hours" class="link link4">Hours & Location</a>
+            <a href="#contact" class="link link5" >Contact Us</a>
         </div>
     </div>
     <div class="hero">
@@ -29,19 +28,222 @@
     </div>
     <div class="header2">
         <div class="leftLinkGroup">
-            <div class="link link1">Menu</div>
-            <div class="link link2">About</div>
-            <div class="link link3">Events</div>
+            <a href="#menu" class="link link1" a href="#menu">Menu</a>
+            <a href="#about" class="link link2" a href="#about">About</a>
+            <a href="#events" class="link link3" a href="#events">Events</a>
         </div>
-        <img class="logo2" src="../src/Logo.svg" alt="Logo">
+        <a href="#top">
+            <img class="logo2" src="../src/Logo.svg" alt="Logo">
+        </a>
         <div class="rightLinkGroup">
-            <div class="link link4">Hours & Location</div>
-            <div class="link link5">Contact Us</div>
+            <a href="#hours" class="link link4">Hours & Location</a>
+            <a href="#contact" class="link link5">Contact Us</a>
         </div>
     </div>
-    <h1>Menu</h1>
-    <image class="foodMenu"></image>
-    <image class="foodGif"></image>
+    <div class="foodMenu" id="menu">
+        <div class="menuSubheader">dinner menu</div>
+        <div class="menuContainer">
+            <button class="menuSideButtons">A</button>
+            <div class="menuSections">
+                <div class="menuLeft">
+                    <div class="category">APPETIZERS
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">beet toast
+                                        <span class="allergins">(N)</span>
+                                    </div>
+                                    <div class="price">10</div>
+                                </div>
+                                <div class="description">beet, cashew cream cheese, fried leek, thyme</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">smoked potatoes
+                                        <span class="allergins">(GF)</span>
+                                    </div>
+                                    <div class="price">9</div>
+                                </div>
+                                <div class="description">with pickled beets & dill cream</div>                        </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">truffle mac & cheese
+                                        <span class="allergins">(N) (W)</span>
+                                    </div>
+                                    <div class="price">8</div>
+                                </div>
+                                <div class="description">cashew cream cheese with breadcrumb topping & white truffle oil</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">mezze
+                                        <span class="allergins">(N) (W)</span>
+                                    </div>                                
+                                    <div class="price">15-20</div>
+                                </div>
+                                <div class="description">choose from 4-6 items: falafel, hummus, vine toast, muhammara, beet & cream cheese on toast, stuffed dates. Served with olives, pickles, pita</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">SOUPS
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">Soup of the Day
+                                        <span class="allergins"></span>
+                                    </div>                                
+                                    <div class="price">cup 5 | bowl 7</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menuCenter">
+                    <div class="category">MAIN
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">falafel
+                                        <span class="allergins"></span>
+                                    </div>                               
+                                    <div class="price">11 | 40 (Family)</div>
+                                </div>
+                                <div class="description">falafel, hummus, tabbouleh, pickles, tahini, pita. Add smoked potatoes, pickled beets, or 2 vine leaves to any falafel order - $2.50 each</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">ABC Chicken
+                                        <span class="allergins">(N) (W)</span>
+                                    </div>                                
+                                    <div class="price">14</div>
+                                </div>
+                                <div class="description">tempura seitan chicken, almond, broccoli, carrot, sake-tamari sauce, rice</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">ravioli
+                                        <span class="allergins"></span>
+                                    </div>                                
+                                    <div class="price">20</div>
+                                </div>
+                                <div class="description">carrot cream cheese, chervil gremolata, pickled carrot</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">bibimbop
+                                        <span class="allergins">(N)</span>
+                                    </div>                                
+                                    <div class="price">14</div>
+                                </div>
+                                <div class="description">garlic & ginger fried rice, carrot, shiitake, brocolli, tofu, pine nut, gochugaru sauce</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">risotto
+                                        <span class="allergins"></span>
+                                    </div>                                
+                                    <div class="price">13</div>
+                                </div>
+                                <div class="description">saffron, carrot, pea, crispy leak, carrot reduction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menuRight">
+                    <div class="category">SALADS
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">nancy's salad
+                                        <span class="allergins">(N) (W)</span>
+                                    </div>                                
+                                    <div class="price">9</div>
+                                </div>
+                                <div class="description">greens, carrots, fennel, pistachio, croutons, capers, lemonette</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">fattoush salad
+                                        <span class="allergins"></span>
+                                    </div>                                
+                                    <div class="price">10</div>
+                                </div>
+                                <div class="description">tomato, bell pepper, cucumber, onion, toasted pita, sumac, mint</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">tabbouleh salad
+                                        <span class="allergins">(GF)</span>
+                                    </div>                               
+                                    <div class="price">9</div>
+                                </div>
+                                <div class="description">parsely, scallion, tomato, quinoa</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">curried chicken salad
+                                        <span class="allergins">(N) (W)</span>
+                                    </div>
+                                    <div class="price">11</div>
+                                </div>
+                                <div class="description">house-made seitan, greens, tomato, curry, almond, cranberry, cucumber, bell pepper, carrot, lemonette</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category">DESSERTS
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">jane's cookies
+                                        <span class="allergins"></span>
+                                    </div>
+                                    <div class="price">2.50</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="dishGroup">
+                                <div class="dishGroupUpper">
+                                    <div class="name">chocolate avocado mousse
+                                        <span class="allergins"></span>
+                                    </div>                                
+                                    <div class="price">8</div>
+                                </div>
+                                <div class="description">orange, maple, coconut, smoked sea salt</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="menuSideButtons">A</button>
+        </div>
+        <div class="menuFooter">(GF) Gluten Free (N) Nut (S) Soy (W) Wheat</div>
+    </div>
+    <div class="foodImageContainer">
+        <img src="ABCChicken.jpeg" class="foodImage" id="foodImage1">
+        <img src="mezze.jpeg" class="foodImage" id="foodImage2">
+        <img src="ravioli.jpeg" class="foodImage" id="foodImage3">
+    </div>
     <image class="drinkMenu"></image>
     <div class="drinkImgContainer">
         <div class="drink1"></div>
@@ -49,15 +251,20 @@
         <div class="drink3"></div>
         <div class="drink4"></div>
     </div>
-    <div class="hours">
-        <h1>Hours and Location</h1>
+    <div class="about" id="about">
+        <h1>About Us</h1>
     </div>
-    <div class="events">
+    <div class="events" id="events">
         <h1>Events</h1>
     </div>
-    <div class="contact">
+    <div class="hours" id="hours">
+        <h1>Hours and Location</h1>
+    </div>
+   
+    <div class="contact" id="contact">
         <h1>Contact Us</h1>
     </div>
 
   </body>
+  <script src="main.js"></script>
 </html>
