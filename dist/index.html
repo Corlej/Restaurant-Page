@@ -8,45 +8,71 @@
 
 </head>
 <body>
-    <div class="header" id="top">
-        <div class="leftLinkGroup">
-            <a href="#menu" class="link link1">Menu</a>
-            <a href="#about" class="link link2">About</a>
-            <a  href="#events" class="link link3">Events</a>
+        <div class="header" id="top">
+            <div class="mainHamburgerButton" onclick="toggleMainMenu(this)">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="mainHamburgerMenu">
+                <a href="#menu" class="link link1" onclick="toggleMainMenu()">Menu</a>
+                <a href="#about" class="link link2" onclick="toggleMainMenu()">About</a>
+                <a href="#events" class="link link3" onclick="toggleMainMenu()">Events</a>
+                <a href="#hours" class="link link4" onclick="toggleMainMenu()">Hours & Contact</a>
+            </div>
+            <a href="./index.html" class="logoGroup">
+                <img class="logo" src="../src/Logo.svg"  alt="Logo">
+                <div class="headerText">Greenhorn</div>
+            </a>
+            <div class="headerLinkGroup">
+                <a href="#menu" class="link link1">Menu</a>
+                <a href="#about" class="link link2">About</a>
+                <a href="#events" class="link link3">Events</a>
+                <a href="#hours" class="link link4">Hours & Contact</a>
+            </div>
+            <div class="filler"></div>
         </div>
-        <a href="./index.html" class="logoGroup">
-            <img class="logo" src="../src/Logo.svg"  alt="Logo">
-            <div class="header-text">Greenhorn</div>
-        </a>
-        <div class="rightLinkGroup">
-            <a href="#hours" class="link link4">Hours & Location</a>
-            <a href="#contact" class="link link5" >Contact Us</a>
+        <div class="hero">
+            <image class="heroImg"></image>
         </div>
-    </div>
-    <div class="hero">
-        <image class="heroImg"></image>
-    </div>
-    <div class="header2">
-        <div class="leftLinkGroup">
-            <a href="#menu" class="link link1" a href="#menu">Menu</a>
-            <a href="#about" class="link link2" a href="#about">About</a>
-            <a href="#events" class="link link3" a href="#events">Events</a>
-        </div>
-        <a href="#top">
-            <img class="logo2" src="../src/Logo.svg" alt="Logo">
-        </a>
-        <div class="rightLinkGroup">
-            <a href="#hours" class="link link4">Hours & Location</a>
-            <a href="#contact" class="link link5">Contact Us</a>
+    <div class="secondHeader">
+            <div class="linkGroup">
+                <a href="#top">
+                    <img class="logo2" src="../src/Logo.svg" alt="Logo">
+                </a>
+                <a href="#menu" class="link link1" a href="#menu">Menu</a>
+                <a href="#about" class="link link2" a href="#about">About</a>
+                <a href="#events" class="link link3" a href="#events">Events</a>
+                <a href="#hours" class="link link4">Hours & Contact</a>
+            </div>
+            <div class="secondHamburgerButton" onclick="toggleSecondMenu(this)">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="secondHamburgerMenu">
+                <a href="./index.html" class="link link1" onclick="toggleSecondMenu()">Home</a>
+                <a href="#menu" class="link link1" onclick="toggleSecondMenu()">Menu</a>
+                <a href="#about" class="link link2" onclick="toggleSecondMenu()">About</a>
+                <a href="#events" class="link link3" onclick="toggleSecondMenu()">Events</a>
+                <a href="#hours" class="link link4" onclick="toggleSecondMenu()">Hours & Contact</a>
+            </div>
         </div>
     </div>
     <div class="foodMenu" id="menu">
-        <div class="menuHeader"></div>
+        <div class="menuHeader">
+            <div class="menuHeaderLeft"></div>
+            <div class="menuHeaderTitle"></div>
+            <div class="menuHeaderRight"></div>
+        </div>
         <div class="menuBody">
-            <svg class="menuSideButtons left" viewBox="0 0 40 40"><path d="M26.714 34a.865.865 0 0 1-.612-.251l-13.429-13.16a.877.877 0 0 1 0-1.25L26.027 6.251a.874.874 0 1 1 1.224 1.248L14.536 19.965l12.79 12.536A.875.875 0 0 1 26.714 34z"></path></svg>          
+            <button class="menuSideButtons left">
+                <svg viewBox="0 0 40 40"><path d="M26.714 34a.865.865 0 0 1-.612-.251l-13.429-13.16a.877.877 0 0 1 0-1.25L26.027 6.251a.874.874 0 1 1 1.224 1.248L14.536 19.965l12.79 12.536A.875.875 0 0 1 26.714 34z"></path></svg>          
+            </button>
             <div class="dinnerMenu">
                 <div class="menuLeft">
-                    <div class="category">APPETIZERS
+                    <div class="category">
+                        <div class="categoryHeader">APPETIZERS</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -91,7 +117,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="category">SOUPS
+                    <div class="category">
+                        <div class="categoryHeader">SOUPS</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -105,7 +132,8 @@
                     </div>
                 </div>
                 <div class="menuCenter">
-                    <div class="category">MAIN
+                    <div class="category">
+                        <div class="categoryHeader">MAIN</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -164,7 +192,8 @@
                     </div>
                 </div>
                 <div class="menuRight">
-                    <div class="category">SALADS
+                    <div class="category">
+                        <div class="categoryHeader">SALADS</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -210,7 +239,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="category">DESSERTS
+                    <div class="category">
+                        <div class="categoryHeader">DESSERTS</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -237,7 +267,8 @@
             </div>
             <div class="lunchMenu">
                 <div class="menuLeft">
-                    <div class="category">SMALL PLATES
+                    <div class="category">
+                        <div class="categoryHeader">SMALL PLATES</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -272,7 +303,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="category">SOUPS
+                    <div class="category">
+                        <div class="categoryHeader">SOUPS</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -281,13 +313,13 @@
                                     </div>                                
                                     <div class="price">cup 5 | bowl 7</div>
                                 </div>
-                                <div class="description">served with homemade bread</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="menuCenter">
-                    <div class="category">SANDWICHES
+                    <div class="category">
+                        <div class="categoryHeader">SANDWICHES</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -346,7 +378,8 @@
                     </div>
                 </div>
                 <div class="menuRight">
-                    <div class="category">SALADS
+                    <div class="category">
+                        <div class="categoryHeader">SALADS</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -392,7 +425,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="category">DESSERTS
+                    <div class="category">
+                        <div class="categoryHeader">DESSERTS</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -408,7 +442,7 @@
             </div>
             <div class="brunchMenu">
                 <div class="menuLeft">
-                    <div class="category">MAIN</div>
+                    <div class="categoryHeader">MAIN</div>
                     <div class="columnGroup">
                         <div class="columnGroupLeft">
                             <div class="item">
@@ -527,7 +561,8 @@
                     </div>
                 </div>
                 <div class="menuRight">
-                    <div class="category">FEATURED DRINKS
+                    <div class="category">
+                        <div class="categoryHeader">FEATURED DRINKS</div>
                         <div class="item">
                             <div class="dishGroup">
                                 <div class="dishGroupUpper">
@@ -559,8 +594,7 @@
                                 <div class="description">served hot or cold</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="category">DESSERTS
+                    <div class="categoryHeader">DESSERTS</div>
                         <div class="item">
                             <div class="dishGroup"> 
                                 <div class="dishGroupUpper">
@@ -575,37 +609,462 @@
                     </div>
                 </div>
             </div>
-            <svg class="menuSideButtons right" viewBox="0 0 40 40"><path d="M13.36 34a.876.876 0 0 1-.614-1.499l12.717-12.466-12.79-12.536a.876.876 0 0 1 1.225-1.249l13.429 13.161a.877.877 0 0 1 0 1.249L13.974 33.75a.877.877 0 0 1-.614.25z"/></svg>
+            <button class="menuSideButtons right">
+                <svg viewBox="0 0 40 40"><path d="M13.36 34a.876.876 0 0 1-.614-1.499l12.717-12.466-12.79-12.536a.876.876 0 0 1 1.225-1.249l13.429 13.161a.877.877 0 0 1 0 1.249L13.974 33.75a.877.877 0 0 1-.614.25z"/></svg>
+            </button>
         </div>
-        <div class="menuFooter">(GF) Gluten Free (N) Nut (S) Soy (W) Wheat</div>
+        <div class="menuFooter">
+            <div class="menuFooterLeft"></div>
+            <div class="menuFooterText">(GF) Gluten Free (N) Nut (S) Soy (W) Wheat</div>
+            <div class="menuFooterRight"></div>
+        </div>
     </div>
-
     <div class="foodImageContainer">
         <img src="ABCChicken.jpeg" class="foodImage" id="foodImage1">
         <img src="mezze.jpeg" class="foodImage" id="foodImage2">
         <img src="ravioli.jpeg" class="foodImage" id="foodImage3">
     </div>
-    <image class="drinkMenu"></image>
-    <div class="drinkImgContainer">
+    <div class="drinkMenu">
+        <div class="menuHeader">DRINK MENU</div>
+        <div class="drinks">
+            <div class="menuLeft">
+                <div class="category">
+                    <div class="categoryHeader">BEER</div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">brilliant blonde ail
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">6</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">subtropic ipa
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">7</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">blueberries in cream cream ale
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">7</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">mighty swell spiked seltzer
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                            <div class="description">in peach, blackberry, or cherry</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">ciderboys
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                            <div class="description">peach county, blackberry wild, or pineapple hula</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">wiehenstephan heffeweissbier
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">schöfferhofer weizen
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">3 Floyd's Zombie Dust
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">short's brewery soft parade
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">fat head's
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                            <div class="description">IPA or Chillout man, have a beer</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">Jackie O's Chomolungma
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">Urban Artifact The Gadget
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">Sour Gal
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">$</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="menuCenter">
+                <div class="category">
+                    <div class="categoryHeader">COCKTAILS</div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">grandad's cough syrup
+                                    <span class="allergins"></span>
+                                </div>                               
+                                <div class="price">9</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">famous dove 
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">9</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">moscow mule
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">9</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">paloma
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">9</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">vodka lemonade
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">8</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">vodka soda
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">7</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">negroni
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">11</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">boulevardier
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">11</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menuRight">
+                <div class="category">
+                    <div class="categoryHeader">WINES</div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">reds
+                                    <span class="allergins"></span>
+                                </div>                               
+                                <div class="price">7-12</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">whites
+                                    <span class="allergins"></span>
+                                </div>                               
+                                <div class="price">7-12</div>
+                            </div>
+                            <div class="description"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">rosé
+                                    <span class="allergins"></span>
+                                </div>                               
+                                <div class="price">7-12</div>
+                            </div>
+                            <div class="description">*please ask your server for our full list of current select wines</div>
+                        </div>
+                    </div>
+                    <div class="categoryHeader">NON-ALCOHOLIC</div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">bottled soda
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">5</div>
+                            </div>
+                            <div class="description">cola, rootbear, vanilla cream soda, black cherry, orange</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">zevia soda (stevia sweetened)
+                                    <span class="allergins"></span>
+                                </div>                                
+                                <div class="price">3</div>
+                            </div>
+                            <div class="description">cola, cream soda, dr zevia, ginger root beer, ginger ale</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">organic lemonade
+                                    <span class="allergins"></span>
+                                </div>                               
+                                <div class="price">4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">waterloo sparkling water
+                                    <span class="allergins"></span>
+                                </div>
+                                <div class="price">2</div>
+                            </div>
+                            <div class="description">cherry, grape, lime, watermelon, grapefruit</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">cold brew coffee
+                                    <span class="allergins"></span>
+                                </div>
+                                <div class="price">6</div>
+                            </div>
+                            <div class="description">black or with whipped coconut cream</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">hibiscus tea
+                                    <span class="allergins"></span>
+                                </div>
+                                <div class="price">4</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="dishGroup">
+                            <div class="dishGroupUpper">
+                                <div class="name">masala chai with coconut milk
+                                    <span class="allergins"></span>
+                                </div>
+                                <div class="price">5</div>
+                            </div>
+                            <div class="description">-hot or iced</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menuFooter"><img class="logo2" src="../src/Logo.svg" alt="Logo">
+        </div>
+    </div>    <div class="drinkImgContainer">
         <div class="drink1"></div>
         <div class="drink2"></div>
         <div class="drink3"></div>
         <div class="drink4"></div>
     </div>
-    <div class="about" id="about">
-        <h1>About Us</h1>
+    <div id="about"></div>
+    <div class="about">
+        <img src="./watermelondog.webp" alt="watermelondog">
+        <div class="rightContainer">
+            <div></div>
+            <div class="bio">
+                <h1>About Us</h1>
+                <h4>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</h4>
+            </div>
+            <div id="events"></div>
+        </div>
     </div>
-    <div class="events" id="events">
-        <h1>Events</h1>
+    <div class="events">
+        <div class="postContainer" id="posts"></div>
+        <!-- Modal HTML structure -->
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-image" id="modal-image"></div>
+            <div class="modal-comments" id="modal-comments"></div>
+            <span class="close">&times;</span>
+          </div>
+        </div>
+        <div id="hours"></div>
     </div>
-    <div class="hours" id="hours">
-        <h1>Hours and Location</h1>
+    <div class="hoursAndContacts">
+        <div class="hoursContainer">
+            <h1 class="hoursHeader">HOURS</h1>
+            <div class="hoursBody">
+                <div class="hoursBodyContainerOne">
+                    <div>Wednesday - Saturday</div>
+                    <div class="hoursBodyContainerOneSection">
+                        <div>Lunch: 11 AM - 2 PM</div>
+                        <div>Dinner: 5 PM - 9 PM</div>
+                    </div>
+                </div>
+                <div class="hoursBodyContainerTwo">
+                    <div>Sunday</div>
+                    <div class="hoursBodyContainerTwoSection">
+                        <div>Brunch: 10 AM - 2 PM</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactContainer">
+            <h1 class="contactsHeader">CONTACT</h1>
+            <div class="contactsBody">
+                <div>112 Vine Street</div>
+                <div>Bluffton, Ohio</div>
+                <div class="phoneNumber">
+                    <span><a href="tel:+12345679">567-226-4568</a></span>
+                </div>
+            </div>
+        </div>
     </div>
-   
-    <div class="contact" id="contact">
-        <h1>Contact Us</h1>
+    <div class="footer">
+        <a href="https://www.facebook.com/GreenhornBluffton/"><svg width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"/></svg></a>
+        <a href="https://www.instagram.com/greenhornbluffton/?hl=en"><svg 
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+          </svg></a>
     </div>
+</body>
+<script>
+    function toggleMainMenu() {
+      document.querySelector('.mainHamburgerButton').classList.toggle('active');
+      document.querySelector('.mainHamburgerMenu').classList.toggle('active');
+    }
+    function toggleSecondMenu() {
+      document.querySelector('.secondHamburgerButton').classList.toggle('active');
+      document.querySelector('.secondHamburgerMenu').classList.toggle('active');
+    }
+  </script>
+<script src="main.js"></script>
 
-  </body>
-  <script src="main.js"></script>
 </html>

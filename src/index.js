@@ -1,7 +1,7 @@
 import './style.css';
 
 window.addEventListener('scroll', function() {
-  var header = document.querySelector('.header2');
+  var header = document.querySelector('.secondHeader');
   var scrollPosition = window.scrollY || document.documentElement.scrollTop;
   var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
@@ -20,8 +20,8 @@ setInterval(() => {
   images[currentIndex].classList.remove('show');
   currentIndex = (currentIndex + 1) % images.length;
   images[currentIndex].classList.add('show');
-}, 9250);
-const menuHeader = document.querySelector('.menuHeader');
+}, 5000);
+const menuHeader = document.querySelector('.menuHeaderTitle');
 const sideButtons = document.querySelectorAll('.menuSideButtons');
 const dinnerMenu = document.querySelector('.dinnerMenu');
 const lunchMenu = document.querySelector('.lunchMenu');
@@ -44,9 +44,9 @@ function getCurrentMenuIndex() {
   const currentDate = new Date();
   const currentHour = currentDate.getHours();
   // Define the time ranges for each menu option
-  const dinnerTimeStart = 16;  // 4 PM
+  const dinnerTimeStart = 14;  // 2 PM
   const brunchTimeStart = 8;  // 8 AM
-  const lunchTimeStart = 11;   // 11 AM
+  const lunchTimeStart = 10;   // 10 AM
   
   // Determine the current menu based on the time
   if (currentHour >= dinnerTimeStart || currentHour < brunchTimeStart) {
@@ -103,5 +103,97 @@ function updateMenuVisibility() {
   }
 }
 
-// Set the initial Header based on the current time
 menuHeader.innerHTML = menuOptions[currentMenuIndex];
+
+//instagram display api//
+
+const accessToken = 'IGQWRPVkhqcE16SXZAQQnJ0bW0tc3AxdnA4SlVLZA19weVpvVTNqOVg2ZAHBjUUFwMmEwSWdpRzYwU2ExMU5NR2RRTWdQYzFHaVlNQldEOU1GdDZAvQ2xlRjBZAc0Q3RWdtZAG5IcXgtWG84LU5JOER1RV9XRXNGT3M3OFUZD';
+const captionLimit = 60;
+
+fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,thumbnail_url&access_token=${accessToken}&limit=6`)
+.then(response => response.json())
+.then(data => {
+  const postsContainer = document.getElementById('posts');
+
+  data.data.forEach(post => {
+    const postElement = document.createElement('div');
+    postElement.classList.add('post');
+
+    const imageElement = document.createElement('img');
+    imageElement.src = post.media_url;
+    imageElement.alt = post.caption || '';
+
+    const captionElement = document.createElement('div');
+    captionElement.classList.add('caption');
+    const captionText = post.caption || '';
+    captionElement.innerText = captionText.length > captionLimit ? captionText.slice(0, captionLimit) + '...' : captionText;
+
+    postElement.appendChild(imageElement);
+    postElement.appendChild(captionElement);
+    postsContainer.appendChild(postElement);
+
+    postElement.addEventListener('click', () => {
+      openModal(post);
+    });
+  });
+})
+
+.catch(error => {
+  console.error('Error fetching Instagram posts:', error);
+});
+
+//instagram modal//
+const modal = document.getElementById('modal');
+const modalImage = document.getElementById('modal-image');
+const modalComments = document.getElementById('modal-comments');
+const closeBtn = document.querySelector('.close');
+
+  
+// Open the modal with the full post and comments
+function openModal(post) {
+  modal.style.display = 'block';
+  modalImage.innerHTML = `<img src="${post.media_url}" alt="${post.caption || ''}">`;
+
+  // Fetch the comments for the post
+  fetch(`https://graph.instagram.com/${post.id}/comments?access_token=${accessToken}`)
+    .then(response => response.json())
+    .then(commentsData => {
+      let commentsHTML = '';
+      commentsData.data.forEach(comment => {
+        commentsHTML += `<p>${comment.text}</p>`;
+      });
+      modalComments.innerHTML = commentsHTML;
+    })
+    .catch(error => {
+      console.error('Error fetching Instagram comments:', error);
+      modalComments.innerHTML = '<p>Error loading comments</p>';
+    });
+}
+  
+// Close the modal
+function closeModal() {
+  modal.style.display = 'none';
+  modalImage.innerHTML = '';
+  modalComments.innerHTML = '';
+}
+
+// Event listener to close modal on close button click
+closeBtn.addEventListener('click', closeModal);
+
+// Event listener to close modal on outside click
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    closeModal();
+  }
+});
+
+const openModalButton = document.getElementById('openModalButton');
+openModalButton.addEventListener('click', () => {
+// Replace with the desired post object
+const post = {
+  media_url: 'https://example.com/image.jpg',
+  caption: 'Example caption'
+};
+
+openModal(post);
+});
